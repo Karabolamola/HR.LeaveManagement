@@ -1,4 +1,5 @@
 using System.Reflection;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HR.LeaveManagement.Application
@@ -7,7 +8,9 @@ namespace HR.LeaveManagement.Application
     {
         public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
         {
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            var localAssembly = Assembly.GetExecutingAssembly();
+            services.AddAutoMapper(localAssembly);
+            services.AddMediatR(localAssembly);
             return services;
         }
     }
