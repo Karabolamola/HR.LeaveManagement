@@ -3,8 +3,8 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Commands
 {
-    public sealed class DeleteLeaveAllocationRequest : IRequest<LeaveAllocationDto>
+    public sealed class DeleteLeaveAllocationCommand : IRequest<int>
     {
-        
+        public LeaveAllocationDto LeaveAllocationDto { get; set; }
     }
 }
