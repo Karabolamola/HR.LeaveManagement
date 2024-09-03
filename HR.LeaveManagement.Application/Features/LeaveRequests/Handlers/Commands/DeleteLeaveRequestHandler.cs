@@ -8,7 +8,7 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
 {
-    public class DeleteLeaveRequestHandler : IRequestHandler<DeleteLeaveTypeRequest, LeaveTypeDto>
+    public class DeleteLeaveRequestHandler : IRequestHandler<DeleteLeaveTypeCommand, LeaveTypeDto>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
@@ -19,9 +19,9 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
             _mapper = mapper;
         }
         
-        public async Task<LeaveTypeDto> Handle(DeleteLeaveTypeRequest request, CancellationToken cancellationToken)
+        public async Task<LeaveTypeDto> Handle(DeleteLeaveTypeCommand command, CancellationToken cancellationToken)
         {
-            var leaveRequest = await _leaveRequestRepository.DeleteAsync(request);
+            var leaveRequest = await _leaveRequestRepository.DeleteAsync(command);
             return _mapper.Map<LeaveTypeDto>(leaveRequest);
         }
     }

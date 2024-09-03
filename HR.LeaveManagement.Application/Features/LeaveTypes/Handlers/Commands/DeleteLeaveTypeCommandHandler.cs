@@ -4,25 +4,27 @@ using AutoMapper;
 using HR.LeaveManagement.Application.DTOs.LeaveType;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
 using HR.LeaveManagement.Application.Persistance.Contracts;
+using HR.LeaveManagement.Domain;
 using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
 {
-    public class DeleteLeaveTypeRequestHandler : IRequestHandler<DeleteLeaveTypeRequest, LeaveTypeDto>
+    public class DeleteLeaveTypeCommandHandler : IRequestHandler<DeleteLeaveTypeCommand, int>
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IMapper _mapper;
 
-        public DeleteLeaveTypeRequestHandler(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
+        public DeleteLeaveTypeCommandHandler(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
         {
             _leaveTypeRepository = leaveTypeRepository;
             _mapper = mapper;
         }
         
-        public async Task<LeaveTypeDto> Handle(DeleteLeaveTypeRequest request, CancellationToken cancellationToken)
+        public async Task<int> Handle(DeleteLeaveTypeCommand command, CancellationToken cancellationToken)
         {
-            var leaveType = await _leaveTypeRepository.DeleteAsync(request);
-            return _mapper.Map<LeaveTypeDto>(leaveType);
+            var leaveType = _mapper.Map<LeaveType>(command.LeaveTypeDto);
+            var leaveTypeResponse = await _leaveTypeRepository.DeleteAsync(leaveType);
+            return leaveTypeResponse.Id;
         }
     }
 }
