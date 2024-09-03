@@ -3,8 +3,8 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Commands
 {
-    public sealed class UpdateLeaveCommand : IRequest<int>
+    public sealed class UpdateLeaveCommand : IRequest<Unit>
     {
-        public LeaveRequestDto LeaveRequestDto { get; set; }
+        public UpdateLeaveRequestDto UpdateLeaveRequestDto { get; set; }
     }
 }
