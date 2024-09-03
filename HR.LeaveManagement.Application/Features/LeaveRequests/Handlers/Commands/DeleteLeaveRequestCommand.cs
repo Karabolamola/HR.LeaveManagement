@@ -9,7 +9,7 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
 {
-    public class DeleteLeaveRequestCommand : IRequestHandler<DeleteLeaveTypeCommand, int>
+    public class DeleteLeaveRequestCommand : IRequestHandler<DeleteLeaveTypeCommand>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
@@ -20,11 +20,11 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
             _mapper = mapper;
         }
         
-        public async Task<int> Handle(DeleteLeaveTypeCommand command, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteLeaveTypeCommand command, CancellationToken cancellationToken)
         {
-            var leaveRequest = _mapper.Map<LeaveRequest>(command.LeaveTypeDto);
-            var leaveRequestResponse = await _leaveRequestRepository.DeleteAsync(leaveRequest);
-            return leaveRequestResponse.Id;
+            var leaveRequest = await _leaveRequestRepository.GetAsync(command.Id);
+            await _leaveRequestRepository.DeleteAsync(leaveRequest);
+            return Unit.Value;
         }
     }
 }

@@ -4,8 +4,8 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Commands
 {
-    public sealed class DeleteLeaveCommand : IRequest<int>
+    public sealed class DeleteLeaveCommand : IRequest
     {
-        public LeaveRequestDto LeaveRequestDto { get; set; }
+        public int Id { get; set; }
     }
 }
