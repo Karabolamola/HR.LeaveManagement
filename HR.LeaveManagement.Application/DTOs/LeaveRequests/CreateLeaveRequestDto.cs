@@ -1,7 +1,6 @@
 using System;
-using HR.LeaveManagement.Application.DTOs.LeaveType;
 
-namespace HR.LeaveManagement.Application.DTOs.LeaveRequest
+namespace HR.LeaveManagement.Application.DTOs.LeaveRequests
 {
     public class CreateLeaveRequestDto
     {
