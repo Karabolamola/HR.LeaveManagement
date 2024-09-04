@@ -1,6 +1,8 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
+using HR.LeaveManagement.Application.DTOs.LeaveRequests.Validators;
 using HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Commands;
 using HR.LeaveManagement.Application.Persistance.Contracts;
 using HR.LeaveManagement.Domain;
@@ -21,6 +23,13 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
         
         public async Task<int> Handle(CreateLeaveCommand command, CancellationToken cancellationToken)
         {
+            var validator = new CreateLeaveRequestDtoValidator(_leaveRequestRepository);
+            var validationResult = await validator.ValidateAsync(command.CreateLeaveRequestDto);
+            if (validationResult.IsValid == false)
+            {
+                throw new Exception("The creation of the leave allocation is not valid.");
+            }
+            
             var leaveRequest = _mapper.Map<LeaveRequest>(command.CreateLeaveRequestDto);
             var leaveRequestResponse = await _leaveRequestRepository.AddAsync(leaveRequest);
             return leaveRequestResponse.Id;
