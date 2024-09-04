@@ -1,10 +1,13 @@
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using HR.LeaveManagement.Application.DTOs.LeaveRequests.Validators;
+using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Commands;
 using HR.LeaveManagement.Application.Persistance.Contracts;
+using HR.LeaveManagement.Application.Responses;
 using HR.LeaveManagement.Domain;
 using MediatR;
 
@@ -23,16 +26,23 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
         
         public async Task<int> Handle(CreateLeaveRequestCommand requestCommand, CancellationToken cancellationToken)
         {
+            var response = new BaseCommandResponse();
             var validator = new CreateLeaveRequestDtoValidator(_leaveRequestRepository);
-            var validationResult = await validator.ValidateAsync(requestCommand.CreateLeaveRequestDto, cancellationToken);
+            var validationResult = await validator.ValidateAsync(requestCommand.CreateLeaveRequestDto);
+
             if (validationResult.IsValid == false)
             {
-                throw new Exception("The creation of the leave allocation is not valid.");
+                response.Success = false;
+                response.Message = "Creation Failed";
+                response.Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToList();
             }
             
             var leaveRequest = _mapper.Map<LeaveRequest>(requestCommand.CreateLeaveRequestDto);
-            var leaveRequestResponse = await _leaveRequestRepository.AddAsync(leaveRequest);
-            return leaveRequestResponse.Id;
+            
+            response.Success = true;
+            response.Message = "Creation Successful";
+            response.RecordId = leaveRequest.Id;
+            return response;
         }
     }
 }
