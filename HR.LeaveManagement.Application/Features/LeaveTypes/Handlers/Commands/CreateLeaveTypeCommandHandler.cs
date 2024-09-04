@@ -24,7 +24,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
         public async Task<int> Handle(CreateLeaveTypeCommand command, CancellationToken cancellationToken)
         {
             var validator = new CreateLeaveTypeDtoValidator();
-            var validationResult = await validator.ValidateAsync(command.CreateLeaveTypeDto);
+            var validationResult = await validator.ValidateAsync(command.CreateLeaveTypeDto, cancellationToken);
             if (validationResult.IsValid == false)
             {
                 throw new Exception("The creation of the leave type is not valid.");

@@ -24,7 +24,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Comm
         public async Task<int> Handle(CreateLeaveAllocationCommand command, CancellationToken cancellationToken)
         {
             var validator = new CreateLeaveAllocationDtoValidator(_leaveAllocationRepository);
-            var validationResult = await validator.ValidateAsync(command.CreateLeaveAllocationDto);
+            var validationResult = await validator.ValidateAsync(command.CreateLeaveAllocationDto, cancellationToken);
             if (validationResult.IsValid == false)
             {
                 throw new Exception("The creation of the leave allocation is not valid.");

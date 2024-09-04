@@ -10,27 +10,27 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
 {
-    public class CreateLeaveRequestCommand : IRequestHandler<CreateLeaveCommand, int>
+    public class CreateLeaveRequestCommandHandler : IRequestHandler<CreateLeaveRequestCommand, int>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
 
-        public CreateLeaveRequestCommand(ILeaveRequestRepository leaveRequestRepository, IMapper mapper)
+        public CreateLeaveRequestCommandHandler(ILeaveRequestRepository leaveRequestRepository, IMapper mapper)
         {
             _leaveRequestRepository = leaveRequestRepository;
             _mapper = mapper;
         }
         
-        public async Task<int> Handle(CreateLeaveCommand command, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateLeaveRequestCommand requestCommand, CancellationToken cancellationToken)
         {
             var validator = new CreateLeaveRequestDtoValidator(_leaveRequestRepository);
-            var validationResult = await validator.ValidateAsync(command.CreateLeaveRequestDto);
+            var validationResult = await validator.ValidateAsync(requestCommand.CreateLeaveRequestDto, cancellationToken);
             if (validationResult.IsValid == false)
             {
                 throw new Exception("The creation of the leave allocation is not valid.");
             }
             
-            var leaveRequest = _mapper.Map<LeaveRequest>(command.CreateLeaveRequestDto);
+            var leaveRequest = _mapper.Map<LeaveRequest>(requestCommand.CreateLeaveRequestDto);
             var leaveRequestResponse = await _leaveRequestRepository.AddAsync(leaveRequest);
             return leaveRequestResponse.Id;
         }
