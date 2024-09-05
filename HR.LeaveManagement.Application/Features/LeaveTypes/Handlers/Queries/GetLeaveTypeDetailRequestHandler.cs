@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using HR.LeaveManagement.Application.DTOs.LeaveTypes;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Requests.Queries;
-using HR.LeaveManagement.Application.Persistance.Contracts;
+using HR.LeaveManagement.Application.Contracts.Persistence;
 using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Queries

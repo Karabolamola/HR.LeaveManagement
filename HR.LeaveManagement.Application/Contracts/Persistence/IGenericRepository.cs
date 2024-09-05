@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HR.LeaveManagement.Application.Persistence.Contracts
+namespace HR.LeaveManagement.Application.Contracts.Persistence
 {
     public interface IGenericRepository<T> where T : class
     {
@@ -9,7 +9,7 @@ namespace HR.LeaveManagement.Application.Persistence.Contracts
         Task<IReadOnlyList<T>> GetAllAsync();
         Task<bool> Exists(int id);
         Task<T> AddAsync(T entity);
-        Task<T> UpdateAsync(T entity);
-        Task<T> DeleteAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(T entity);
     }
 }

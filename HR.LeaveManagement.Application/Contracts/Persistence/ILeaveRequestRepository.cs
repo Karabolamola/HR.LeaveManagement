@@ -1,11 +1,12 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using HR.LeaveManagement.Domain;
 
-namespace HR.LeaveManagement.Application.Persistence.Contracts
+namespace HR.LeaveManagement.Application.Contracts.Persistence
 {
     public interface ILeaveRequestRepository : IGenericRepository<LeaveRequest>
     {
-        Task<LeaveRequest> GetAllLeaveRequestWithDetailsAsync();
+        Task<List<LeaveRequest>> GetAllLeaveRequestWithDetailsAsync();
         Task<LeaveRequest> GetLeaveRequestWithDetailsAsync(int id);
         Task ChangeApprovalStatus(LeaveRequest leaveRequest, bool? approved);
     }

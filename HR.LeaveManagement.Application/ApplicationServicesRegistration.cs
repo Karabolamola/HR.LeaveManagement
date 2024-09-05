@@ -11,6 +11,7 @@ namespace HR.LeaveManagement.Application
             var localAssembly = Assembly.GetExecutingAssembly();
             services.AddAutoMapper(localAssembly);
             services.AddMediatR(localAssembly);
+
             return services;
         }
     }

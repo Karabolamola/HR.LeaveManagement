@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
-using HR.LeaveManagement.Application.Persistance.Contracts;
+using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Domain;
 using MediatR;
 
@@ -13,13 +13,15 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public DeleteLeaveRequestCommand(ILeaveRequestRepository leaveRequestRepository, IMapper mapper)
+        public DeleteLeaveRequestCommand(ILeaveRequestRepository leaveRequestRepository, IMapper mapper, IUnitOfWork unitOfWork)
         {
             _leaveRequestRepository = leaveRequestRepository;
             _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
-        
+
         public async Task<Unit> Handle(DeleteLeaveTypeCommand command, CancellationToken cancellationToken)
         {
             var leaveRequest = await _leaveRequestRepository.GetAsync(command.Id);
@@ -29,6 +31,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
             }
 
             await _leaveRequestRepository.DeleteAsync(leaveRequest);
+            await _unitOfWork.SaveChangesToDatabaseAsync();
             return Unit.Value;
         }
     }
