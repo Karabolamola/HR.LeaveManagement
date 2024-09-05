@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "E:\\Developer\\HR.LeaveManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\features\\leaveallocations\\handlers\\commands\\createleaveallocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\features\\leaveallocations\\handlers\\commands\\createleaveallocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\features\\leaveallocations\\requests\\commands\\createleaveallocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\features\\leaveallocations\\requests\\commands\\createleaveallocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\features\\leaverequests\\requests\\commands\\createleaverequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\features\\leaverequests\\requests\\commands\\createleaverequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\features\\leaverequests\\handlers\\commands\\createleaverequestcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\features\\leaverequests\\handlers\\commands\\createleaverequestcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,31 +33,70 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateLeaveAllocationCommand.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Requests\\Commands\\CreateLeaveAllocationCommand.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Requests\\Commands\\CreateLeaveAllocationCommand.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Requests\\Commands\\CreateLeaveAllocationCommand.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Requests\\Commands\\CreateLeaveAllocationCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T07:20:19.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateLeaveAllocationCommandHandler.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Handlers\\Commands\\CreateLeaveAllocationCommandHandler.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Handlers\\Commands\\CreateLeaveAllocationCommandHandler.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Handlers\\Commands\\CreateLeaveAllocationCommandHandler.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Application\\Features\\LeaveAllocations\\Handlers\\Commands\\CreateLeaveAllocationCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T07:16:04.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateLeaveRequestCommand.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveRequests\\Requests\\Commands\\CreateLeaveRequestCommand.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Features\\LeaveRequests\\Requests\\Commands\\CreateLeaveRequestCommand.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveRequests\\Requests\\Commands\\CreateLeaveRequestCommand.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Application\\Features\\LeaveRequests\\Requests\\Commands\\CreateLeaveRequestCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T07:11:13.548Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CreateLeaveRequestCommandHandler.cs",
               "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
               "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
               "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
               "RelativeToolTip": "HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACwAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T06:37:53.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "BaseCommandResponse.cs",
               "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Responses\\BaseCommandResponse.cs",
               "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Responses\\BaseCommandResponse.cs",
               "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Responses\\BaseCommandResponse.cs",
               "RelativeToolTip": "HR.LeaveManagement.Application\\Responses\\BaseCommandResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T05:57:30.329Z",
               "EditorCaption": ""
