@@ -41,7 +41,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
             
             response.Success = true;
             response.Message = "Creation Successful";
-            response.RecordId = leaveRequest.Id;
+            response.Id = leaveRequest.Id;
             return response;
         }
     }
