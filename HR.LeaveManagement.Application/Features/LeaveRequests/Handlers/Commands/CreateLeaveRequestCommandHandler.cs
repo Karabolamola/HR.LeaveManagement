@@ -13,7 +13,7 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
 {
-    public class CreateLeaveRequestCommandHandler : IRequestHandler<CreateLeaveRequestCommand, int>
+    public class CreateLeaveRequestCommandHandler : IRequestHandler<CreateLeaveRequestCommand, BaseCommandResponse>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
@@ -24,7 +24,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
             _mapper = mapper;
         }
         
-        public async Task<int> Handle(CreateLeaveRequestCommand requestCommand, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(CreateLeaveRequestCommand requestCommand, CancellationToken cancellationToken)
         {
             var response = new BaseCommandResponse();
             var validator = new CreateLeaveRequestDtoValidator(_leaveRequestRepository);
