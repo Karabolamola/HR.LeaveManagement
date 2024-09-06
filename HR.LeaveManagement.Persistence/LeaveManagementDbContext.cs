@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace HR.LeaveManagement.Persistence
 {
-    public class LeaveManagementDbContext : DbContext
+    public sealed class LeaveManagementDbContext : DbContext
     {
         public LeaveManagementDbContext(DbContextOptions<LeaveManagementDbContext> options) : base(options)
         {
+            Database.EnsureCreatedAsync();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
