@@ -9,7 +9,7 @@ using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
 {
-    public class DeleteLeaveRequestCommand : IRequestHandler<DeleteLeaveTypeCommand>
+    public class DeleteLeaveRequestCommand : IRequestHandler<DeleteLeaveTypeCommand, Unit>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;

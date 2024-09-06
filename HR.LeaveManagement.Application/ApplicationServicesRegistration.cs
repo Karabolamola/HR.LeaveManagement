@@ -8,9 +8,8 @@ namespace HR.LeaveManagement.Application
     {
         public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
         {
-            var localAssembly = Assembly.GetExecutingAssembly();
-            services.AddAutoMapper(localAssembly);
-            services.AddMediatR(localAssembly);
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddMediatR(config => config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
             return services;
         }
