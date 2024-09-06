@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Developer\\HR.LeaveManagement\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65326E63-F1D7-4C0E-98BC-AF07A3820875}|HR.LeaveManagement.Infrastructure\\HR.LeaveManagement.Infrastructure.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.infrastructure\\mail\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65326E63-F1D7-4C0E-98BC-AF07A3820875}|HR.LeaveManagement.Infrastructure\\HR.LeaveManagement.Infrastructure.csproj|solutionrelative:hr.leavemanagement.infrastructure\\mail\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\features\\leaverequests\\handlers\\commands\\createleaverequestcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\features\\leaverequests\\handlers\\commands\\createleaverequestcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\models\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\models\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|e:\\developer\\hr.leavemanagement\\hr.leavemanagement.application\\contracts\\infrastructure\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712C8874-DAC1-4325-A43E-5F25F61DFC03}|HR.LeaveManagement.Application\\HR.LeaveManagement.Application.csproj|solutionrelative:hr.leavemanagement.application\\contracts\\infrastructure\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +30,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Infrastructure\\Mail\\EmailSender.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Infrastructure\\Mail\\EmailSender.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Infrastructure\\Mail\\EmailSender.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Infrastructure\\Mail\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAACDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T13:18:07.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateLeaveRequestCommandHandler.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Application\\Features\\LeaveRequests\\Handlers\\Commands\\CreateLeaveRequestCommandHandler.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwDwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T13:07:55.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Models\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Models\\EmailSettings.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Models\\EmailSettings.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Application\\Models\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T13:06:35.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Email.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Models\\Email.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Models\\Email.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Models\\Email.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Application\\Models\\Email.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T13:02:59.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEmailSender.cs",
+              "DocumentMoniker": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "RelativeDocumentMoniker": "HR.LeaveManagement.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "ToolTip": "E:\\Developer\\HR.LeaveManagement\\HR.LeaveManagement.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "RelativeToolTip": "HR.LeaveManagement.Application\\Contracts\\Infrastructure\\IEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T13:01:08.974Z",
+              "EditorCaption": ""
             }
           ]
         }
